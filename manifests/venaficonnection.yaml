@@ -1,0 +1,13 @@
+apiVersion: jetstack.io/v1alpha1
+kind: VenafiConnection
+metadata:
+  name: venafi-components
+  namespace: venafi
+spec:
+  vcp:
+    url: https://api.venafi.cloud
+    apiKey:
+      - secret:
+          name: venafi-credentials
+          fields:
+            - apiKey
